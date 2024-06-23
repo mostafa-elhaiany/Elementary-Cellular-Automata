@@ -11,14 +11,14 @@ class ECA:
         while len(binary)<8: # pad to 8 bits
             binary = "0" + binary
         self.rules = { # calculate the rule table
-            "000" : binary[0],
-            "001" : binary[1],
-            "010" : binary[2],
-            "011" : binary[3],
-            "100" : binary[4],
-            "101" : binary[5],
-            "110" : binary[6],
-            "111" : binary[7]
+            "000" : binary[7],
+            "001" : binary[6],
+            "010" : binary[5],
+            "011" : binary[4],
+            "100" : binary[3],
+            "101" : binary[2],
+            "110" : binary[1],
+            "111" : binary[0]
         }
 
     def update(self):

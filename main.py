@@ -12,9 +12,10 @@ pygame.display.set_caption("Cellular Automata ")
 
 grid = np.zeros((config.NUM_ITERS,config.GRID_WIDTH))
 
-grid[0] = np.random.random((config.GRID_WIDTH,))
-grid[grid>config.PROBA] = 1
-grid[grid<1] = 0
+grid[0, config.GRID_WIDTH//2] = 1
+# grid[0] = np.random.random((config.GRID_WIDTH,))
+# grid[grid>config.PROBA] = 1
+# grid[grid<1] = 0
 
 simulating = False
 

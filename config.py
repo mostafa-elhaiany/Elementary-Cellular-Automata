@@ -2,7 +2,7 @@ CELL_SIZE = (4, 4)  # Width and height of each cell
 GRID_WIDTH = 350 # width of the 1D Cellular Automota
 NUM_ITERS = 160
 PROBA = .9 # percentage of zeros in iteration 0 (random generation)
-RULE = 120 # any number between 1 and 256
+RULE = 82 # any number between 1 and 256
 
 #visualization
 AS_CIRCLES = False
