@@ -1,21 +1,24 @@
 """
 The class handling the iteration of the  Elementary Cellular Automata (ECA)
-the ECA follows a set of knows rules hardcoded into the class 
+the ECA follows a set of known rules there are 256 rules 
 """
 import numpy as np
 
 class ECA: 
-    def __init__(self, state):
+    def __init__(self, state, rule=220):
         self.state = state.astype(np.uint0)
-        self.rules = {
-            "000" : 0,
-            "001" : 1,
-            "010" : 1,
-            "011" : 1,
-            "100" : 0,
-            "101" : 1,
-            "110" : 1,
-            "111" : 0
+        binary = bin(rule)[2:]
+        while len(binary)<8: # pad to 8 bits
+            binary = "0" + binary
+        self.rules = { # calculate the rule table
+            "000" : binary[0],
+            "001" : binary[1],
+            "010" : binary[2],
+            "011" : binary[3],
+            "100" : binary[4],
+            "101" : binary[5],
+            "110" : binary[6],
+            "111" : binary[7]
         }
 
     def update(self):

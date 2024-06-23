@@ -65,7 +65,7 @@ def handle_event(event):
 
 running = True
 iteration = 1
-automata = ECA(grid[0])
+automata = ECA(grid[0], config.RULE)
 clock = pygame.time.Clock()
 while running:
     for event in pygame.event.get():
